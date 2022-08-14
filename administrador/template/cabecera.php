@@ -1,14 +1,14 @@
 <?php
-session_start();
-if(!isset($_SESSION['usuario'])){
-    header("Location:../index.php");
-}else{
-    if($_SESSION['usuario']=="ok"){
-        $nombredeusuario=$_SESSION['nombredeUsuario'];
+    session_start();
+    if(!isset($_SESSION['usuario'])){
+        header("Location:../index.php");
     }else{
-        header("Location:index.php");
+        if($_SESSION['usuario']=="ok"){
+            $nombredeusuario=$_SESSION['nombredeUsuario'];
+        }else{
+            header("Location:index.php");
+        }
     }
-}
 ?>
 <!doctype html>
 <html lang="en">
